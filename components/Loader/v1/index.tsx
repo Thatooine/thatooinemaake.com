@@ -1,5 +1,5 @@
-import {useSpring, animated, useSpringRef} from "react-spring";
-import {useEffect} from "react";
+import {useSpring, animated, useSpringRef, Controller} from "react-spring";
+import {useEffect, useRef} from "react";
 
 export const FancyLoader = () => {
     const props = useSpring({
@@ -11,22 +11,33 @@ export const FancyLoader = () => {
         from: {opacity: 0, color: '#16b8f3'},
     })
 
-    const ref = useSpringRef()
-    const [style, animate] = useSpring(() => ({x: 0, y: 0}))
-
-    useEffect(() => {
-        console.log(ref)
-        console.log(animate)
+    const styles = useSpring({
+        loop: true,
+        to: (() => {
+            const to = []
+            for(let val =  -10; val < 10; val++){
+                to.push({
+                    x: val,
+                    y: 2 * val * val
+                })
+            }
+            return to
+        })(),
+        from: {
+            x: -10,
+            y: 200
+        },
     })
 
     return (
         <div>
             <animated.div
                 style={{
-                    width: 80,
-                    height: 80,
-                    backgroundColor: '#46e891', borderRadius: 16,
-                    ...style,
+                    width: 10,
+                    height: 10,
+                    borderRadius: '50%',
+                    backgroundColor: '#46e891',
+                    ...styles
                 }}
             />
             <animated.div style={props}>
@@ -35,7 +46,8 @@ export const FancyLoader = () => {
                         fontFamily: "Papyrus",
                         fontSize: '12px',
                     }}
-                >Loading</div>
+                >Loading
+                </div>
             </animated.div>
         </div>
     )
