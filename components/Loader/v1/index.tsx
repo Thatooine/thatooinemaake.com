@@ -52,7 +52,8 @@ export const FancyLoader = () => {
                     width: 20,
                     height: 20,
                     borderRadius: '50%',
-                    backgroundColor: 'rgb(255,192,0)',
+                    boxShadow: "0px 0px 24px 4px rgb(255,192,0)",
+                    backgroundColor: 'rgb(255,170,0)',
                     ...styles
                 }}
             />
