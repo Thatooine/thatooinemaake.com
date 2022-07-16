@@ -59,7 +59,9 @@ export const FancyLoader = () => {
             />
             <animated.div
                 style={{
-                    color: 'white'
+                    color: 'white',
+                    position: 'relative',
+                    bottom: '16px'
                 }}
             >
                 {number.to(n => n.toFixed(0))}
