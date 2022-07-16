@@ -17,7 +17,7 @@ export const FancyLoader = () => {
         delay: 0,
         config: {
             ...config.molasses,
-            duration: 40,
+            duration: 60,
             damping: 0,
         },
         to: (() => {
@@ -46,23 +46,21 @@ export const FancyLoader = () => {
     })
 
     return (
-        <div
-            style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: 'center'
-            }}
-        >
+        <div>
             <animated.div
                 style={{
                     width: 20,
                     height: 20,
                     borderRadius: '50%',
-                    backgroundColor: '#46e891',
+                    backgroundColor: 'rgb(255,192,0)',
                     ...styles
                 }}
             />
-            <animated.div>
+            <animated.div
+                style={{
+                    color: 'white'
+                }}
+            >
                 {number.to(n => n.toFixed(0))}
             </animated.div>
         </div>

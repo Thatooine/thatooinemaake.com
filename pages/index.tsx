@@ -9,7 +9,7 @@ const App: NextPage = () => {
                 height: '100vh',
                 alignItems: 'center',
                 justifyContent: "center",
-                backgroundColor: "#16b8f3"
+                backgroundImage: "radial-gradient(circle, rgb(49, 144, 228) 0%, rgb(29, 84, 166) 100%)"
             }}
         >
             <FancyLoader/>
