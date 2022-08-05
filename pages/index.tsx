@@ -1,6 +1,11 @@
 import type {NextPage} from 'next'
 import {FancyLoader} from "../components/Loader/v1";
+import Link from "next/link";
 
+
+// 1. The fancy loader must potentially fade out after loading happens
+// 2. Slight change on the background color density (darker blue)
+// 3. Display the main landing page
 const App: NextPage = () => {
     return (
         <div

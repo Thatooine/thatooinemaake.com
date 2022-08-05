@@ -1,12 +1,13 @@
 import {NextPage} from "next";
 
 
-const Home: NextPage = () => {
+// // Where all my photos will be
+const Blog: NextPage = () => {
     return (
         <div>
-            Blog page
+            Blog coming soon! =)
         </div>
     )
 }
 
-export default Home
+export default Blog

@@ -1,12 +1,12 @@
 import {NextPage} from "next";
-import exp from "constants";
 
-const Gallary: NextPage = () => {
+// Where all my photos will be
+const Gallery: NextPage = () => {
     return (
         <div>
-            Gallary Page
+            Gallery Page
         </div>
     )
 }
 
-export default Gallary
+export default Gallery
