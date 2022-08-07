@@ -1,6 +1,8 @@
 import type {NextPage} from 'next'
-import {AppShell, Navbar, Header} from '@mantine/core';
+import {AppShell, Header} from '@mantine/core';
 import {Button} from '@mantine/core';
+import {Text} from '@mantine/core';
+import sunLogo from "/images/sun.svg"
 
 // 1. The fancy loader must potentially fade out after loading happens
 // 2. Slight change on the background color density (darker blue)
@@ -15,11 +17,12 @@ const App: NextPage = () => {
                         root: {
                             border: "none",
                             backgroundColor: "rgb(225, 192, 58)",
-                            display: "flex",
+                            display: "grid",
+                            gridTemplateColumns: '50px 1fr auto'
 
                         }
                     })}
-                    height={60}
+                    height={90}
                     p="xs"
                 >
                     <div
@@ -28,32 +31,59 @@ const App: NextPage = () => {
                             alignItems: 'center'
                         }}
                     >
-                        ☀️
+                        <img
+                            alt="" width="100%"
+                            src={sunLogo}
+                        />
                     </div>
                     <div
                         style={{
                             display: "flex",
                             flexDirection: "row-reverse",
                             gap: '8px',
-                            width: "100%"
+                            width: "100%",
+                            justifyContent: "center",
+                            alignItems: 'center',
                         }}
                     >
-                        <Button
-                            variant={"outline"}
-                        >
-                            Resume
-                        </Button>
-                        <Button
-                            variant={"outline"}
+                        <Text
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
+                            color={"white"}
                         >
                             Gallery
-                        </Button>
-                        <Button
-                            variant={"outline"}
+                        </Text>
+                        <Text
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center'
+                            }}
+                            color={"white"}
                         >
                             Blog
-                        </Button>
+                        </Text>
+                        <Text
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center'
+                            }}
+                            color={"white"}
+                        >
+                            About
+                        </Text>
                     </div>
+                    <Button
+                        style={{
+                            alignSelf: 'center',
+                            borderRadius: '20px'
+                        }}
+                        variant={"gradient"}
+                        gradient={{from: 'indigo', to: 'cyan', deg: 60}}
+                    >
+                        Resume
+                    </Button>
                 </Header>}
             styles={(theme) => ({
                 main: {
