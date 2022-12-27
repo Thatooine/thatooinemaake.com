@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import {AppShell, Header} from '@mantine/core';
-import {Button} from '@mantine/core';
+import {Button, Avatar} from '@mantine/core';
 import {Text} from '@mantine/core';
 import sunLogo from "/images/sun.svg"
 
@@ -51,6 +51,7 @@ const App: NextPage = () => {
                                 display: 'flex',
                                 alignItems: 'center',
                             }}
+                            size={24}
                             color={"white"}
                         >
                             Gallery
@@ -60,6 +61,7 @@ const App: NextPage = () => {
                                 display: 'flex',
                                 alignItems: 'center'
                             }}
+                            size={24}
                             color={"white"}
                         >
                             Blog
@@ -69,6 +71,7 @@ const App: NextPage = () => {
                                 display: 'flex',
                                 alignItems: 'center'
                             }}
+                            size={24}
                             color={"white"}
                         >
                             About
@@ -95,10 +98,31 @@ const App: NextPage = () => {
                 style={{
                     display: 'flex',
                     height: '100vh',
-                    alignItems: 'center',
+                    width: '100%',
+                    gap: "40px",
                     justifyContent: "center",
+                    marginTop: '40px'
                 }}
             >
+                <div  style={{maxWidth: "600px", position: "relative", top: "80px"}}>
+                    <Text sx={{fontWeight: 600}} size={24} color={"white"} >
+                        HELLO,
+                    </Text>
+                    <Text sx={{fontWeight: 600}} size={50} color={"white"} >
+                        I'm Thato Maake
+                    </Text>
+                    <Text size={18} color={"white"} >
+                        I'm software engineer working in the finTech industry for the past 5 years, specializing in the development of web applications and integration with blockchain technologies, particularly Stellar.
+                        Throughout my career, I have gained a wealth of experience in building efficient and reliable systems that provide valuable insights to clients. Currently am building innovative and disruptive
+                        products in the capital markets at Mesh.Trade.
+
+                    </Text>
+                </div>
+                <Avatar
+                    radius={100}
+                    size={500}
+                    src={'profilepic.jpg'}
+                />
             </div>
         </AppShell>
     )
